@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { AddRecipe } from './AddRecipe';
+import { DisplayRecipe } from './DisplayRecipe';
 import './AddRecipe.css';
 
 class App extends Component {
@@ -19,12 +20,7 @@ class App extends Component {
             </div>
         </header>
         <AddRecipe />
-        <section className='display-item'>
-            <div className='wrapper'>
-              <ul>
-              </ul>
-            </div>
-          </section>
+        <DisplayRecipe />
       </div>
     );
   }
