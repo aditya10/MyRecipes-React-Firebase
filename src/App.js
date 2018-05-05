@@ -4,7 +4,12 @@ import { AddRecipe } from './AddRecipe';
 import './AddRecipe.css';
 
 class App extends Component {
-
+  constructor(){
+    super();
+    this.state = {
+      addRecipe: false
+    }
+  }
   render() {
     return (
       <div className='app'>
@@ -20,10 +25,14 @@ class App extends Component {
               </ul>
             </div>
           </section>
-
       </div>
     );
   }
 }
+
+//use hidden to show/unshow addrecipe
+//make similar view for display + update
+//learn about updating an item on firebase
+//updateRecipe compnenet
 
 export default App;

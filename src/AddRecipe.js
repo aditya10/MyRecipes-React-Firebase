@@ -12,7 +12,6 @@ export class AddRecipe extends Component {
       ingredients: '',
       procedure: '',
       recipeLink: '',
-      pictureLink: '',
       localImg: ''
     }
     this.handleChange = this.handleChange.bind(this);
@@ -37,6 +36,14 @@ export class AddRecipe extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    if(this.state.recipeName === ''){
+      alert("Error: requires name");
+      return
+    };
+    if(this.state.localImg === ''){
+      this.uploadEverything();
+      return
+    };
     const storage = firebase.storage();
     const storageRef = storage.ref();
     const uploadTask = storageRef.child('images-'+this.state.recipeName).put(this.state.localImg);
@@ -50,7 +57,6 @@ export class AddRecipe extends Component {
           //console.log('File available at', this.state.pictureLink);
           }.bind(this));
       }.bind(this));
-
   }
 
   uploadEverything(){
@@ -63,7 +69,7 @@ export class AddRecipe extends Component {
       recipeLink: this.state.recipeLink,
       pictureLink: this.downloadURL
     };
-    console.log('adf available at', this.downloadURL);
+    console.log('Pic available at', this.downloadURL);
     itemsRef.push(item);
     this.setState({
       recipeName: '',
