@@ -1,0 +1,104 @@
+.container{
+  width: 100%;
+}
+.add-recipe {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 18px;
+  width: 80%;
+}
+.add-recipe .smallInput{
+ display: block;
+ border: 0;
+ background-color: #eeeeee;
+ padding: 10px;
+ border-radius: 20px;
+ width: 90%;
+ height: 30px;
+ margin: 30px;
+ font-size: 18px;
+ font-family: 'Source Sans Pro', sans-serif;
+ font-weight: 200;
+}
+.add-recipe .mediumInput{
+ display: block;
+ border: 0;
+ background-color: #eeeeee;
+ padding: 10px;
+ border-radius: 20px;
+ width: 90%;
+ height: 60px;
+  margin: 30px;
+  font-size: 18px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+}
+.add-recipe .largeInput{
+ display: block;
+ border: 0;
+ background-color: #eeeeee;
+ padding: 10px;
+ border-radius: 20px;
+ width: 90%;
+ height: 200px;
+  margin: 30px;
+  font-size: 18px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+}
+
+.add-recipe button {
+  position: relative;
+  display: block;
+  margin: 30px auto;
+  padding: 0;
+  overflow: hidden;
+  font-size: 18px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  background-color: #2ecc71;
+  color: #ffffff;
+  transition: background-color .3s;
+}
+
+.add-recipe button:hover, .add-recipe button:focus {
+  background-color: #2fcd94;
+}
+
+.add-recipe button span {
+  display: block;
+  padding: 12px 24px;
+}
+
+.add-recipe button:before {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: block;
+  width: 0;
+  padding-top: 0;
+
+  border-radius: 100%;
+
+  background-color: rgba(236, 240, 241, .3);
+
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.add-recipe button:active:before {
+  width: 120%;
+  padding-top: 120%;
+
+  transition: width .2s ease-out, padding-top .2s ease-out;
+}
