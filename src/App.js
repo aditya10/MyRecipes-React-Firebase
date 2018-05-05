@@ -15,6 +15,7 @@ class App extends Component {
       items: []
     }
     this.handleSelect = this.handleSelect.bind(this);
+    this.handleAdd = this.handleAdd.bind(this);
     this.handleClose = this.handleClose.bind(this);
     this.handleCloseAddRecipe = this.handleCloseAddRecipe.bind(this);
   }
@@ -46,13 +47,16 @@ class App extends Component {
   handleCloseAddRecipe(){
     this.setState({addRecipe: false});
   }
+  handleAdd(){
+    this.setState({addRecipe: true});
+  }
   render() {
     let disp;
     if(this.state.addRecipe){
       disp = (
         <div>
         <AddRecipe />
-        <button onClick={this.handleCloseAddRecipe}>Close</button>
+        <button className="closeAddButton" onClick={this.handleCloseAddRecipe}>Close</button>
         </div>
     );
     }
@@ -63,19 +67,22 @@ class App extends Component {
           <ul>
             {this.state.items.map((item) => {
               return (
-                <li className='recipe-bit'>
-                  <tbody>
-                    <tr><td colSpan="2"><img src={item.pictureLink}/></td>
+                <li className='col-md-4 col-sm-12'>
+                  <div className="recipe-bit">
+                  <tbody className='table'>
+                    <tr><td className='imgHolder' colSpan="2"><img src={item.pictureLink}/></td>
                     </tr>
                     <tr>
-                      <td>{item.recipeName}</td>
-                      <td><button onClick={() => this.handleSelect(item.id)}>View</button></td>
+                      <td className='rName'>{item.recipeName}</td>
+                      <td className='rButton'><button onClick={() => this.handleSelect(item.id)}>View</button></td>
                     </tr>
                   </tbody>
+                </div>
                 </li>
               )
             })}
         </ul>
+        <button className="addButton" onClick={this.handleAdd}>+</button>
         </div>
       </section>
       );
@@ -83,8 +90,8 @@ class App extends Component {
     else if (this.state.displayRecipe){
       disp = (
         <div>
-        <DisplayRecipe item={this.state.itemID}/>
-        <button onClick={this.handleClose}>Close</button>
+        <DisplayRecipe item={this.state.recipeID}/>
+        <button className="closeDisplayButton" onClick={this.handleClose}>Close</button>
         </div>
       );
     }
@@ -96,7 +103,6 @@ class App extends Component {
               <h1>Recipe Book</h1>
             </div>
         </header>
-
         {disp}
       </div>
     );
