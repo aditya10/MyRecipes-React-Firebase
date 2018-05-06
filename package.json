@@ -2,6 +2,7 @@
   "name": "myrecipes-react-firebase",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://restructu.red/my-recipes/",
   "dependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2",

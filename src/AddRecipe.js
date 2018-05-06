@@ -44,6 +44,10 @@ export class AddRecipe extends Component {
       alert("Error: requires name");
       return
     };
+    if(this.state.localImg === ''){
+      this.uploadEverything();
+      return
+    }
     const storage = firebase.storage();
     const storageRef = storage.ref();
     const uploadTask = storageRef.child('images-'+this.state.recipeName).put(this.state.localImg)
@@ -81,7 +85,7 @@ export class AddRecipe extends Component {
     return (
       <div className='app'>
         <div className='container'>
-          <section className='add-recipe'>
+          <section className='add-recipe col-md-8 col-sm-12'>
               <form onSubmit={this.handleSubmit}>
                 <input className="smallInput" type="text" name="recipeName" placeholder="Name of Recipe" onChange={this.handleChange} value={this.state.recipeName}/>
                 <input className="smallInput" type="text" name="time" placeholder="Time required to prepare" onChange={this.handleChange} value={this.state.time}/>

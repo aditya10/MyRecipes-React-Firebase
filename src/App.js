@@ -104,6 +104,7 @@ class App extends Component {
             </div>
         </header>
         {disp}
+        <div className="spacer"></div>
       </div>
     );
   }
