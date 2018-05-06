@@ -30,36 +30,32 @@ export class AddRecipe extends Component {
 
 
   handleImageSelect(e){
+      console.log("handle image select");
       this.setState({localImg: e.target.files[0]})
+      console.log("handle image select dd"+this.state.localImg);
   }
 
 
   handleSubmit(e) {
     e.preventDefault();
+    console.log('Event occured');
+    console.log("Submitting image with address "+this.state.localImg);
     if(this.state.recipeName === ''){
       alert("Error: requires name");
       return
     };
-    if(this.state.localImg === ''){
-      this.uploadEverything();
-      return
-    };
     const storage = firebase.storage();
     const storageRef = storage.ref();
-    const uploadTask = storageRef.child('images-'+this.state.recipeName).put(this.state.localImg);
-    uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED,
-      function(){
-        uploadTask.snapshot.ref.getDownloadURL().then(function(url) {
-          this.downloadURL = url;
-          console.log('File available at', this.downloadURL);
-          this.uploadEverything()
-          //this.setState({pictureLink: ''+this.downloadURL});
-          //console.log('File available at', this.state.pictureLink);
-          }.bind(this));
+    const uploadTask = storageRef.child('images-'+this.state.recipeName).put(this.state.localImg)
+      .then(function(snapshot){
+        this.downloadURL = snapshot.downloadURL;
+        console.log('File available at', this.downloadURL);
+        this.uploadEverything();
       }.bind(this));
   }
 
   uploadEverything(){
+    console.log('Trial');
     const itemsRef = firebase.database().ref('items');
     const item = {
       recipeName: this.state.recipeName,

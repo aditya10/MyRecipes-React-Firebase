@@ -48,7 +48,7 @@ componentDidMount() {
                 <h2>Procedure</h2>
                 <div className="procedure"><p>{this.state.procedure}</p></div>
                 <h2>Additional Link</h2>
-                <div className="recipeLink">{this.state.recipeLink}</div>
+                <div className="recipeLink"><a href={this.state.recipeLink}>{this.state.recipeLink}</a></div>
 
           </section>
         </div>
