@@ -1,0 +1,97 @@
+.addButton{
+    font-size: 30px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    background-color: #2ecc71;
+    color: #ffffff;
+    transition: background-color .3s;
+    position:fixed;
+    left:30px;
+    bottom:30px;
+    margin:0px;
+    padding:15px 30px;
+    border-radius: 50%;
+}
+
+.addButton:hover{
+    background-color: #0a261c;
+}
+
+.recipe-bits{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+.list button {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+    outline: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0);
+    background-color: #eeeeee;
+}
+
+.list button:hover{
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    background-color: #eee;
+}
+
+.recipe-bit {
+    width: 100%;
+    outline: none;
+    color: #000;
+    background-color: #eeeeee;
+}
+
+.recipe-bit .table{
+    width: 100%;
+    min-width: 100%;
+    border: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recipe-bit .table td {
+    border: none;
+}
+
+.recipe-bit .imgHolder{
+    width: 100%;
+    height: 200px;
+    padding: 0;
+}
+
+.recipe-bit .imgHolder img{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 400px;
+}
+
+.rName{
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    width: 70%;
+}
+
+.spacer {
+    height: 20vh;
+}

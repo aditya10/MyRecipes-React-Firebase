@@ -1,0 +1,68 @@
+.container{
+    width: 100%;
+}
+
+.display-recipe {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 200;
+}
+
+.display-recipe .recipeName{
+    display: block;
+    width: 90%;
+    margin: 10px;
+    margin-top: 30px;
+    font-size: 25px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+.display-recipe .time{
+    display: block;
+    margin: 10px;
+    font-size: 22px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 200;
+}
+.display-recipe .imgDiv{
+    width: 100%;
+}
+.display-recipe .imgDiv img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+}
+.display-recipe h2{
+    display: block;
+    margin: 10px;
+    font-size: 22px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+.display-recipe .ingredients{
+    display: block;
+    margin: 20px;
+    font-size: 22px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 200;
+}
+
+.display-recipe .procedure{
+    display: block;
+    margin: 20px;
+    font-size: 22px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 200;
+}
+.display-recipe .recipeLink{
+    display: block;
+    margin: 20px;
+    font-size: 22px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 200;
+}
